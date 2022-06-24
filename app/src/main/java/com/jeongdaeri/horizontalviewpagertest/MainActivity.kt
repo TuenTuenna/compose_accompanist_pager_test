@@ -46,7 +46,12 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = {
                             scope.launch {
                                 if (state.currentPage < MAX_SIZE - 1) {
-                                    state.scrollToPage(state.currentPage + 1)
+
+                                    // 애니메이션 X
+//                                    state.scrollToPage(state.currentPage + 1)
+
+                                    // 애니메이션 O
+                                    state.animateScrollToPage(state.currentPage + 1)
                                 }
 //                                // or
 //                                state.scrollBy(100f)
